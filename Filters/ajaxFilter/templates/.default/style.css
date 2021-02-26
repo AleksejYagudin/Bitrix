@@ -1,0 +1,24 @@
+#custom-filter {
+	display: flex;
+	justify-content: flex-end;
+}
+.click {
+	cursor: pointer;
+
+}
+
+.custom-filter_item {
+	margin-right: 10px;
+	margin-left: 10px;
+
+}
+.arrowUp {
+	display: none;
+	color: red;
+}
+.arrowDown {
+	display: none;
+}
+.item-select{
+	color: red;
+}
