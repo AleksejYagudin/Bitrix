@@ -1,0 +1,6 @@
+let grid = BX.Main.gridManager.getInstanceById('CRM_CONTACT_LIST_V12'),
+	rows = new BX.Grid.ColsSortable(grid).getRowsList();
+	rows.forEach(function (item){
+		item.addEventListener('click', function (e){
+			console.log(item);
+        })

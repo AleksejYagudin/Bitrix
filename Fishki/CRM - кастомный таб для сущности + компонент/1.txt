@@ -1,0 +1,21 @@
+Подписываемся на событие:
+Bitrix\Main\EventManager::getInstance()->addEventHandler(
+    'crm',
+    'onEntityDetailsTabsInitialized',
+    static function(\Bitrix\Main\Event $event) {
+        $tabs = $event->getParameter('tabs');
+        $tabs[] = [
+            'id' => 'custom',
+            'name' => 'custom',
+            'loader' => [
+                'serviceUrl' => '/local/testL.php?&site'.SITE_ID.'&'.bitrix_sessid_get()
+            ],
+        ];
+
+        return new \Bitrix\Main\EventResult(\Bitrix\Main\EventResult::SUCCESS, [
+            'tabs' => $tabs,
+        ]);
+    }
+);
+
+Смотрим $tabs
