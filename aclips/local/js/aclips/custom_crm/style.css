@@ -1,0 +1,10 @@
+.crm-entity-card-container {
+    width: 100%;
+}
+
+.crm-entity-card-container-content .ui-entity-editor-column-content {
+    display: grid;
+    grid-template-columns: 41.6% 54.4%;
+    align-content: space-around;
+    justify-content: space-between;
+}
